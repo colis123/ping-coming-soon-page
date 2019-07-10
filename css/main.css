@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap');
+
+
+:root {
+  --primary-blue: rgb(79, 125, 241);
+  --light-blue: hsl(223, 100%, 88%);
+  --light-red: hsl(354, 100%, 66%);
+  --gray: rgb(150, 150, 150);
+  --dark-blue: hsl(209, 33%, 12%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Libre Franklin', sans-serif;
+  line-height: 1.4;
+}
+
+/*Utilites */
+a {
+  text-decoration: none;
+}
+.text-center {
+  text-align: center;
+}
+
+.light-text {
+  color: var(--gray);
+}
+
+.bold {
+  color: black;
+  font-weight: 800;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--primary-blue);
+  color: #fff;
+  border-radius: 30px;
+  padding: .75rem 2rem;
+  font-size: 14px;
+  box-shadow: 2px 2px 4px rgba(79, 125, 241, .6);
+}
+
+.input {
+  display: inline block;
+  padding: .75rem 2rem;
+  border-radius: 30px;
+  border: 1px solid var(--light-blue);
+  margin-right: .25rem;
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: rgba(79, 125, 241, .6);
+}
+
+.container {
+  margin: 3.5rem auto;
+  max-width: 900px;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 5rem;
+}
+
+/* Header */
+.container header { 
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  grid-gap: 20px;
+}
+
+.container header form {
+  margin-top: 1.25rem;
+}
+
+.container section img {
+  width: 85%;
+}
+
+.container .form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+/* Footer */
+.container footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+
+.container footer .icons a{
+  padding: .5rem;
+}
+
+.container footer .icons a img {
+  width: 40px;
+  border: 1px solid rgba(150, 150, 150, .5);
+  border-radius: 50%;
+  padding: .25rem;
+}
+
+
+@media screen and (max-width: 500px) {
+
+  .container .form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+
+ 
+}
