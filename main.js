@@ -13,9 +13,11 @@ function validateEmail () {
   if(!re.test(email.value)) {
     error.style.transform = "scale(1)";
     input.style.border = '1px solid var(--light-red)';
+    input.style.marginBottom = '2rem';
   } else {
     error.style.transform = "scale(0)";
-    input.style.border = '1px solid var(--light-blue)'
+    input.style.border = '1px solid var(--light-blue)';
+    input.style.marginBottom = '0';
   }
 }
 
