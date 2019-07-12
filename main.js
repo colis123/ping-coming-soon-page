@@ -11,13 +11,19 @@ function validateEmail () {
   const re = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
 
   if(!re.test(email.value)) {
-    error.style.transform = "scale(1)";
     input.style.border = '1px solid var(--light-red)';
-    input.style.marginBottom = '2rem';
+    error.style.transform = 'scale(1)';
+
+    if(window.innerWidth < 500) {
+      input.style.marginBottom = '2rem';
+    } 
   } else {
-    error.style.transform = "scale(0)";
     input.style.border = '1px solid var(--light-blue)';
-    input.style.marginBottom = '0';
+    error.style.transform = 'scale(0)';
+
+    if(window.innerWidth < 500) {
+      input.style.marginBottom = '0';
+    } 
   }
 }
 
@@ -26,6 +32,7 @@ button.addEventListener('click', (e) => {
 
   validateEmail();
 
-
   e.preventDefault();
 })
+
+
